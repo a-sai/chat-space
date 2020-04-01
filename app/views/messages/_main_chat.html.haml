@@ -1,0 +1,26 @@
+.main-chat
+  .main-chat__group-info
+    .items__group
+      %h2.name test
+      %ul.member member
+    = link_to "#", class: "main-chat__group-info__items__edit" do
+      Edit
+  .main-chat__message-list
+    .main-chat__message-list__items__message
+      .main-chat__message-list__items__message__upper-info
+        %p.main-chat__message-list__items__message__upper-info__talker masa
+        %p.main-chat__message-list__items__message__upper-info__date 2020/03/31 14:48:52
+      .main-chat__message-list__items__message__lower-info
+        %p.main-chat__message-list__items__message__lower-info__text hello
+      .main-chat__message-list__items__message__upper-info
+        %p.main-chat__message-list__items__message__upper-info__talker masa2
+        %p.main-chat__message-list__items__message__upper-info__date 2020/04/01 20:27:18
+      .main-chat__message-list__items__message__lower-info
+        %p.main-chat__message-list__items__message__lower-info__text hello2
+  .main-chat__message-form
+    %form.main-chat__message-form__input-box
+      %input.main-chat__message-form__input-box__text{ :placeholder => "type a message", :type => "text"}
+      %label.main-chat__message-form__input-box__image
+        %i.far.fa-image
+        %input.main-chat__message-form__input-box__image__file{ :type => "file"}
+    %input.main-chat__message-form__input-box__send-btn{ :type => "submit", :name => "commit", :value => "Send"}
