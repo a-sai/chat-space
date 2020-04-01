@@ -9,7 +9,7 @@
 
 .side-bar {
   width: 300px;
-  .side-bar__user-name {
+  &__user-name {
     height: 100px;
     color: #ffffff;
     background-color: #253141;
@@ -44,7 +44,7 @@
       }
     }
   }
-  .side-bar__group-list {
+  &__group-list {
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     padding: 20px 0;
@@ -68,7 +68,7 @@
 
 .main-chat {
   width: calc(100% - 300px);
-  .main-chat__group-info {
+  &__group-info {
     height: 100px;
     background-color: #ffffff;
     border-bottom: 1px solid #eeeeee;
@@ -103,7 +103,7 @@
       color: #38aef0;
     }
   }
-  .main-chat__message-list {
+  &__message-list {
     background-color: #fafafa;
     height: calc(100vh - 190px);
     padding: 35px 20px;
@@ -138,7 +138,7 @@
       }
     }
   }
-  .main-chat__message-form {
+  &__message-form {
     background-color: #d2d2d2;
     height: 90px;
     padding: 20px 40px;
