@@ -1,0 +1,19 @@
+.side-bar
+  .side-bar__user-name
+    .side-bar__user-name__items__user
+      %p.side-bar__user-name__items__user__name masa
+      %ul.side-bar__user-name__items__user__icons
+        %li.side-bar__user-name__items__user__icons__new-group
+        = link_to "#", class: "side-bar__user-name__items__user__icons__new-group" do
+          %i.fa.fa-edit
+          %span<>
+        %li.side-bar__user-name__items__user__icons__edit-user
+        = link_to "#", class: "side-bar__user-name__items__user__icons__edit-user" do
+          %i.fa.fa-cog
+          %span<>
+  .side-bar__group-list
+    .side-bar__group-list__items__groups
+      %p.side-bar__group-list__items__groups__name group name
+      %p.side-bar__group-list__items__groups__message まだメッセージがありません
+      %p.side-bar__group-list__items__groups__name group name2
+      %p.side-bar__group-list__items__groups__message まだメッセージがありませんよ
