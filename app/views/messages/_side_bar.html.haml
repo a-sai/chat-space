@@ -1,14 +1,15 @@
 .side-bar
   .side-bar__user-name
     .side-bar__user-name__items__user
-      %p.side-bar__user-name__items__user__name masa
+      %p.side-bar__user-name__items__user__name
+        = current_user.name
       %ul.side-bar__user-name__items__user__icons
         %li.side-bar__user-name__items__user__icons__new-group
         = link_to "#", class: "side-bar__user-name__items__user__icons__new-group" do
           %i.fa.fa-edit
           %span<>
         %li.side-bar__user-name__items__user__icons__edit-user
-        = link_to "#", class: "side-bar__user-name__items__user__icons__edit-user" do
+        = link_to edit_user_path(current_user) do
           %i.fa.fa-cog
           %span<>
   .side-bar__group-list
