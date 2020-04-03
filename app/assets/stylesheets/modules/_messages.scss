@@ -107,6 +107,7 @@
     background-color: #fafafa;
     height: calc(100vh - 190px);
     padding: 35px 20px;
+    overflow: scroll;
     &__items__message {
       height: 91px;
       background-color: #fafafa;
@@ -147,34 +148,38 @@
       width: 100%;
       display: flex;
       position: relative;
-      &__text {
-        background-color: #ffffff;
-        font-size: 15px;
-        height: 50px;
+      .new_message {
         width: 100%;
-        border-style: none;
-        padding: 0 40px 0 10px;
+        display: flex;
       }
-      &__image {
-        position: absolute;
-        cursor: pointer;
-        font-size: 1.3rem;
-        top: 10px;
-        right: 10px;
-        &__file {
-          display: none;
+        &__text {
+          background-color: #ffffff;
+          font-size: 15px;
+          height: 50px;
+          width: 100%;
+          border-style: none;
+          padding: 0 40px 0 10px;
         }
-      }
-    &__send-btn {
-      width: 100px;
-      height: 50px;
-      padding: 0 30px;
-      margin-left: 15px;
-      background-color: #38aef0;
-      font-size: 15px;
-      cursor: pointer;
-      color: #ffffff;
-      }
+        &__image {
+          cursor: pointer;
+          font-size: 1.3rem;
+          top: 6px;
+          right: 70px;
+          position: absolute;
+          &__file {
+            display: none;
+          }
+        }
+        &__send-btn {
+          width: 100px;
+          height: 50px;
+          padding: 0 30px;
+          margin-left: 15px;
+          background-color: #38aef0;
+          font-size: 15px;
+          cursor: pointer;
+          color: #ffffff;
+        }
     }
   }
 }
