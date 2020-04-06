@@ -1,13 +1,16 @@
 .main-chat
   .main-chat__group-info
-    .items__group
-      .name test
-      %ul.member member
+    .main-chat__group-info__items__group
+      .main-chat__group-info__items__group__name= @group.name
+      %ul.main-chat__group-info__items__group__member-list
+        Member :
+        - @group.users.each do |user|
+          %li.main-chat__group-info__items__group__member-list_member= user.name
     = link_to "#", class: "main-chat__group-info__items__edit" do
       Edit
   .main-chat__message-list
     .main-chat__message-list__items__message
-      = render @messages        
+      = render @messages
   .main-chat__message-form
     .main-chat__message-form__input-box
       = form_for [@group, @message] do |f|
