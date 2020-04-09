@@ -9,22 +9,12 @@
     = link_to edit_group_path(@group) do
       Edit
   .main-chat__message-list
-    .main-chat__message-list__items__message
-      = render @messages
+    = render @messages
   .main-chat__message-form
-    .main-chat__message-form__input-box
-      = form_for [@group, @message] do |f|
+    = form_for [@group, @message] do |f|
+      .main-chat__message-form__input-box
         = f.text_field :content, class: 'main-chat__message-form__input-box__text', placeholder: 'type a message'
-        .main-chat__message-form__input-box__image
-          = f.label :image, class: 'main-chat__message-form__input-box__image' do
-            = icon('fas', 'image', class: 'icon')
-            = f.file_field :image, class: 'main-chat__message-form__input-box__image__file'
-        = f.submit 'Send', class: 'main-chat__message-form__input-box__send-btn'
-
-  -# .main-chat__message-form
-  -#   %form.main-chat__message-form__input-box
-  -#     %input.main-chat__message-form__input-box__text{ :placeholder => "type a message", :type => "text"}
-  -#     %label.main-chat__message-form__input-box__image
-  -#       %i.far.fa-image
-  -#       %input.main-chat__message-form__input-box__image__file{ :type => "file"}
-  -#   %input.main-chat__message-form__input-box__send-btn{ :type => "submit", :name => "commit", :value => "Send"}
+        = f.label :image, class: 'main-chat__message-form__input-box__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'main-chat__message-form__input-box__image__file'
+      = f.submit 'Send', class: 'main-chat__message-form__input-box__send-btn'
